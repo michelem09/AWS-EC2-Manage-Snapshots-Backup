@@ -1,0 +1,16 @@
+# AWS-EC2-Manage-Snapshots-Backup 
+
+This is a simple script based upon AWS SDK PHP to manage volume's snapshots.
+
+It simply create one snapshot per volume (once you run it) and delete snapshot older then 1 month.
+
+Please provide you personal information by copying config-sample.inc.php into config.inc.php.
+
+Run the script backup-snapshots.php with your CRON.
+
+For example:
+
+# Auto AWS Snapshots
+00 08   * * *   /usr/bin/php /var/virtual/aws/backup-snapshots.php
+00 22   * * *   /usr/bin/php /var/virtual/aws/backup-snapshots.php
+00 12   * * 7   /usr/bin/php /var/virtual/aws/backup-snapshots.php
